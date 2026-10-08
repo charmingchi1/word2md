@@ -1,0 +1,13 @@
+# 转换产物: 由 test.docx / test.pptx 生成, 可随时重新生成
+/images/
+/test.md
+/test(*).md
+
+# 打包产物: 由 word2md.py + requirements.txt + README.md 重新压缩生成
+/word2md.zip
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/

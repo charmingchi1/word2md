@@ -1,0 +1,17 @@
+# word2md.py 运行依赖 (Python 3.10+, 当前环境 Python 3.14.6)
+# 安装: pip install -r requirements.txt
+# 用法: python word2md.py [文件/目录...] [-o 输出目录] [--no-ocr]
+#       不带参数则自动转换脚本所在目录下所有 .docx / .pdf / .pptx
+
+mammoth==1.12.2               # .docx 解析为 HTML (标题/列表/表格/图片提取)
+markdownify==1.2.3            # HTML 转 Markdown (GFM 表格支持)
+pymupdf4llm==1.28.2           # PDF 解析为 Markdown (文本/表格/图片提取)
+python-pptx==1.0.2            # .pptx 解析 (逐页文本/表格/图表/图片/备注提取)
+rapidocr_onnxruntime==1.2.3   # 图片文字识别 OCR (中英文, onnxruntime 后端)
+
+# 说明:
+# - 以上五项为直接依赖, 其余传递依赖(pymupdf/onnxruntime/opencv-python/Pillow/
+#   lxml/XlsxWriter 等)由 pip 自动安装。
+# - rapidocr_onnxruntime 不装也能运行, 只是无法提取图片中的文字。
+# - 不处理 .pptx 时 python-pptx 可以不装, 遇到 .pptx 会提示安装。
+# - python-docx 不需要, 仅开发测试时用来生成样例文档。

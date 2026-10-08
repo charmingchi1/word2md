@@ -1,0 +1,11 @@
+# 源码统一用 LF, 避免在 Windows 上检出为 CRLF 造成无谓的整文件改动
+*.py text eol=lf
+*.md text eol=lf
+*.txt text eol=lf
+
+# 二进制文件不做换行转换
+*.docx binary
+*.pptx binary
+*.zip binary
+*.png binary
+*.jpg binary
